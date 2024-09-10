@@ -1,38 +1,159 @@
 .App {
+  font-family: 'Arial', sans-serif;
   text-align: center;
+  padding: 20px;
+  background-color: #f0f4f8;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+  padding: 12px 25px;
+  border: 2px solid transparent;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.save-segment-btn {
+  background-color: #00adf7;
   color: white;
+  border-color: #2dcbff;
 }
 
-.App-link {
-  color: #61dafb;
+.save-segment-btn:hover {
+  background-color: transparent;
+  color: #00adf7;
+  border-color: #2dcbff;
+  transform: translateY(-3px);
 }
 
-@keyframes App-logo-spin {
+.remove-schema-btn {
+  background-color: #e74c3c;
+  color: white;
+  border-color: #e74c3c;
+  padding: 3px 5px;
+  margin: 0 7px;
+}
+
+.remove-schema-btn:hover {
+  background-color: transparent;
+  color: #e74c3c;
+  border-color: #e74c3c;
+  transform: translateY(-3px);
+}
+
+
+.add-schema-btn {
+  background-color: #29dd53;
+  color: white;
+  border-color: #2cff29;
+}
+
+.add-schema-btn:hover {
+  background-color: transparent;
+  color: #29dd53;
+  border-color: #2cff29;
+  transform: translateY(-3px);
+}
+
+.close-btn {
+  background-color: #e74c3c;
+  color: white;
+  border-color: #e74c3c;
+}
+
+.close-btn:hover {
+  background-color: transparent;
+  color: #e74c3c;
+  border-color: #e74c3c;
+  transform: translateY(-1px);
+}
+
+.dropdown-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  width: 450px;
+  animation: popupFadeIn 0.3s ease-in-out;
+}
+
+input {
+  width: 100%;
+  max-width: 350px;
+  margin: 10px auto;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-weight: bold;
+  font-size: medium;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.blue-box {
+  background-color: #e6f7ff;
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 10px;
+  border: 1px solid #b3e0ff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.animated-dropdown {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background-color: white;
+  animation: dropdownSlideIn 0.3s ease-in-out;
+}
+
+.popup-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+@keyframes popupFadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(-10px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes dropdownSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
